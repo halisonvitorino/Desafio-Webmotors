@@ -30,28 +30,19 @@ jobs:
       run: ls -R target
 
     - name: Junit Test Dashboard
-    # You may pin to the exact commit or the version.
-    # uses: janisz/action@2920bc1b1b377c787227b204af6981e8f41bbef3
       uses: janisz/action@v2
       with:
-    # Path(s) to test output file(s) to analyze
         paths: target/surefire-reports/*.xml
-    # File to write with rendered output
         output: summary.html
-    # Types of tests to show in the results table
         show: failed, skipped, passed          
 
     - name: TestForest Dashboard
-  # You may pin to the exact commit or the version.
-  # uses: test-summary/action@fee35d7df20790255fe6aa92cf0f6d28092ecf2f
       uses: test-summary/action@v2.2
       with:
-    # Path(s) to test output file(s) to analyze
         paths: target/surefire-reports/*.xml
-    # File to write with rendered output
         output: summary.html
-    # Types of tests to show in the results table
         show: failed, skipped, passed
+
           
 
 
