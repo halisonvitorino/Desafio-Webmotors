@@ -57,6 +57,7 @@
 				<configuration>
 					<parallel>methods</parallel>
 					<testFailureIgnore>true</testFailureIgnore>
+					<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
