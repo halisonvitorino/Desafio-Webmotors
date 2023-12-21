@@ -3,10 +3,10 @@ name: Java CI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: ubuntu-latest
 
