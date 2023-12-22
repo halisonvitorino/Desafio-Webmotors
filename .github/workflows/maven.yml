@@ -43,6 +43,20 @@ jobs:
         output: summary.html
         show: failed, skipped, passed
 
+    - name: Test Reporter
+      uses: dorny/test-reporter@v1.7.0
+      with:
+        artifact: 1
+        name: teste
+        path: target/surefire-reports/*.xml
+        path-replace-backslashes: java-junit
+        reporter: all
+        list-suites: all
+        list-tests: all
+        max-annotations: 10
+        fail-on-error: true
+        fail-on-empty: true
+
           
 
 
