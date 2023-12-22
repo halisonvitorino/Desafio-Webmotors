@@ -23,25 +23,25 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Run Tests
-      run: mvn test
+    #- name: Run Tests
+     # run: mvn test
 
-    - name: List Contents of target Directory
-      run: ls -R target
+    #- name: List Contents of target Directory
+     # run: ls -R target
 
-    - name: Junit Test Dashboard
-      uses: janisz/action@v2
-      with:
-        paths: target/surefire-reports/*.xml
-        output: summary.html
-        show: failed, skipped, passed          
+   # - name: Junit Test Dashboard
+      #uses: janisz/action@v2
+      #with:
+        #paths: target/surefire-reports/*.xml
+        #output: summary.html
+        #show: failed, skipped, passed          
 
-    - name: TestForest Dashboard
-      uses: test-summary/action@v2.2
-      with:
-        paths: target/surefire-reports/*.xml
-        output: summary.html
-        show: failed, skipped, passed
+    #- name: TestForest Dashboard
+      #uses: test-summary/action@v2.2
+      #with:
+        #paths: target/surefire-reports/*.xml
+        #output: summary.html
+        #show: failed, skipped, passed
 
     - name: Test Reporter
       uses: dorny/test-reporter@v1.7.0
